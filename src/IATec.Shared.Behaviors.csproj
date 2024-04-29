@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackageId>IATec.Shared.Behaviors</PackageId>
+        <Authors>Architecture Team</Authors>
+        <Description>Project developed to help IATec teams to develop their projects faster.</Description>
+        <Copyright>@IATec</Copyright>
+        <RootNamespace>IATec.Shared.Behaviors</RootNamespace>
+        <Version>0.0.1-RC1</Version>
+        <PackageIcon>icon.png</PackageIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="Assets\icon.png" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentResults" Version="3.15.2" />
+      <PackageReference Include="FluentValidation" Version="11.9.1" />
+      <PackageReference Include="MediatR" Version="12.2.0" />
+    </ItemGroup>
+</Project>
