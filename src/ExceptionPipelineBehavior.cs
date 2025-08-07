@@ -7,21 +7,11 @@ using Microsoft.Extensions.Logging;
 
 namespace IATec.Shared.Behaviors;
 
-public class ExceptionPipelineBehavior<TRequest, TResponse>
-        : IPipelineBehavior<TRequest, TResponse>
-        where TRequest : IRequest<TResponse>
-        where TResponse : ResultBase, new()
+public class ExceptionPipelineBehavior<TRequest, TResponse>(
+    ILogger<ExceptionPipelineBehavior<TRequest, TResponse>> logger,
+    IStringLocalizer<Messages> localizer)
+    : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse> where TResponse : ResultBase, new()
 {
-    private readonly ILogger<ExceptionPipelineBehavior<TRequest, TResponse>> _logger;
-    private readonly IStringLocalizer<Messages> _localizer;
-
-    public ExceptionPipelineBehavior(
-        ILogger<ExceptionPipelineBehavior<TRequest, TResponse>> logger, IStringLocalizer<Messages> localizer)
-    {
-        _logger = logger;
-        _localizer = localizer;
-    }
-
     public async Task<TResponse> Handle(
         TRequest request,
         RequestHandlerDelegate<TResponse> next,
@@ -33,10 +23,11 @@ public class ExceptionPipelineBehavior<TRequest, TResponse>
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, _localizer.GetString(nameof(Messages.InternalServerErrorMessage)));
+            logger.LogError(ex, localizer.GetString(nameof(Messages.InternalServerErrorMessage)));
 
             var response = new TResponse();
-            response.Reasons.Add(new Error(_localizer.GetString(nameof(Messages.InternalServerErrorClientMessage)), new InternalServerError()));
+            response.Reasons.Add(
+                new Error(localizer.GetString(nameof(Messages.InternalServerErrorClientMessage)), new InternalServerError()));
 
             return response;
         }
