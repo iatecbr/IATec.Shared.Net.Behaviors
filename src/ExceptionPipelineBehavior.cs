@@ -1,5 +1,6 @@
 using FluentResults;
 using IATec.Shared.Behaviors.Resources;
+using IATec.Shared.Domain.Results.Errors.Default;
 using MediatR;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
@@ -35,7 +36,8 @@ public class ExceptionPipelineBehavior<TRequest, TResponse>
             _logger.LogError(ex, _localizer.GetString(nameof(Messages.InternalServerErrorMessage)));
 
             var response = new TResponse();
-            response.Reasons.Add(new Error(_localizer.GetString(nameof(Messages.InternalServerErrorClientMessage))));
+            response.Reasons.Add(
+                new Error(_localizer.GetString(nameof(Messages.InternalServerErrorClientMessage)), new InternalServerError()));
 
             return response;
         }
