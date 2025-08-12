@@ -26,14 +26,15 @@ steps:
   - script: dotnet build --configuration $(buildConfiguration)
     displayName: 'Dotnet build'
 
-  - task: NuGetCommand@2
+  - task: DotNetCoreCLI@2
     inputs:
-      displayName: 'Pack nuGet package'
-      command: pack
-      packagesToPack: '**/IATec.Shared.Behaviors.csproj'
-      packDestination: '$(Build.ArtifactStagingDirectory)'
-      versioningScheme: byEnvVar
-      versionEnvVar: packageVersion
+      command: 'pack'
+      packagesToPack: '**/IATec.Shared.Behaviors.csproj' 
+      packDirectory: '$(Build.ArtifactStagingDirectory)'
+      nobuild: true 
+      versioningScheme: 'byEnvVar'
+      versionEnvVar: 'packageVersion'
+    displayName: 'Pack NuGet package with dotnet pack'
 
   - task: NuGetAuthenticate@0
     displayName: 'NuGet authenticate'
