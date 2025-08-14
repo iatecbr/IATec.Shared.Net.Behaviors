@@ -2,18 +2,24 @@
 
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
-		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackageId>IATec.Shared.Behaviors</PackageId>
-		<Authors>Architecture Team</Authors>
+		<Authors>IATec | Solutions | Platform Team</Authors>
 		<Description>Project developed to help IATec teams to develop their projects faster.</Description>
-		<Copyright>@IATec</Copyright>
+		<Copyright>@IATec Solutions</Copyright>
 		<RootNamespace>IATec.Shared.Behaviors</RootNamespace>
-		<Version>0.2.0</Version>
+		<Version>1.0.1</Version>
 		<PackageIconUrl>https://assets-services-dev.sdasystems.org/images/icons/standard.library.icon.png</PackageIconUrl>
 		<PackageIcon>icon.png</PackageIcon>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+		<Title>IATec Shared Behaviors</Title>
+		<PackageProjectUrl>https://github.com/iatecbr/IATec.Shared.Net.Behaviors</PackageProjectUrl>
+		<PackageLicenseUrl>https://github.com/iatecbr/IATec.Shared.Net.Behaviors/blob/5b81dea6b3c101aab9122abfad44cb94e5a30480/LICENSE</PackageLicenseUrl>
+		<RepositoryUrl>https://github.com/iatecbr/IATec.Shared.Net.Behaviors</RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+		<PackageTags>net</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -26,21 +32,6 @@
 		<PackageReference Include="MediatR" Version="12.2.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
 		<PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="9.0.8" />
-		<PackageReference Include="IATec.Shared.Domain" Version="0.10.0"/>
-	</ItemGroup>
-
-	<ItemGroup>
-		<Compile Update="Resources\Messages.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Messages.resx</DependentUpon>
-		</Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-		<EmbeddedResource Update="Resources\Messages.resx">
-			<Generator>PublicResXFileCodeGenerator</Generator>
-			<LastGenOutput>Messages.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
+		<PackageReference Include="IATec.Shared.Domain" Version="1.0.1" />
 	</ItemGroup>
 </Project>

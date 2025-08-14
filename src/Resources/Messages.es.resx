@@ -118,9 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="InternalServerErrorClientMessage" xml:space="preserve">
-    <value> Lo siento, se produjo un error interno. Inténtelo de nuevo más tarde.</value>
+    <value>Lo siento, se produjo un error interno. Inténtelo de nuevo más tarde.</value>
   </data>
   <data name="InternalServerErrorMessage" xml:space="preserve">
-    <value> Ha ocurrido una excepción no controlada.</value>
+    <value>Ha ocurrido una excepción no controlada.</value>
   </data>
 </root>

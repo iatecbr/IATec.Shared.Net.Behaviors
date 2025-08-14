@@ -26,8 +26,8 @@ public class ExceptionPipelineBehavior<TRequest, TResponse>(
             logger.LogError(ex, localizer.GetString(nameof(Messages.InternalServerErrorMessage)));
 
             var response = new TResponse();
-            response.Reasons.Add(
-                new Error(localizer.GetString(nameof(Messages.InternalServerErrorClientMessage)), new InternalServerError()));
+            response.Reasons.Add(new InternalServerError(
+                localizer.GetString(nameof(Messages.InternalServerErrorClientMessage))));
 
             return response;
         }
