@@ -9,7 +9,7 @@
 		<Description>Project developed to help IATec teams to develop their projects faster.</Description>
 		<Copyright>@IATec Solutions</Copyright>
 		<RootNamespace>IATec.Shared.Behaviors</RootNamespace>
-		<Version>1.0.4-RC1</Version>
+		<Version>1.0.3-RC1</Version>
 		<PackageIconUrl>https://assets-services-dev.sdasystems.org/images/icons/standard.library.icon.png</PackageIconUrl>
 		<PackageIcon>icon.png</PackageIcon>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
