@@ -12,6 +12,23 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+  - task: replacetokens@6
+    displayName: 'Replace variables in setup-nuget.sh'
+    inputs:
+      targetFiles: 'setup-nuget.sh'
+      encoding: 'auto'
+      writeBOM: true
+      actionOnMissing: 'warn'
+      keepToken: false
+      tokenPrefix: '#{'
+      tokenSuffix: '}#'
+
+  - task: CmdLine@2
+    displayName: 'Run setup-nuget.sh with Git Bash'
+    inputs:
+      script: |
+        "C:\Program Files\Git\bin\bash.exe" -c "chmod +x ./setup-nuget.sh && ./setup-nuget.sh"
+        
   - task: PowerShell@2
     inputs:
       targetType: 'inline'
