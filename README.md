@@ -50,7 +50,7 @@ services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ExceptionPipelineBeha
 - [FluentResults](https://www.nuget.org/packages/FluentResults/) (≥ 4.0.0)
 - [MediatR](https://www.nuget.org/packages/MediatR/) (≥ 14.0.0)
 - [Microsoft.Extensions.Localization.Abstractions](https://www.nuget.org/packages/Microsoft.Extensions.Localization.Abstractions/) (≥ 10.0.8)
-- [IATec.Shared.Domain](https://github.com/iatecbr/IATec.Shared.Net.Behaviors) (≥ 1.2.0)
+- [IATec.Shared.Domain](https://github.com/iatecbr/IATec.Shared.Net.Domain) (≥ 2.0.0)
 
 ## Contributing
 
