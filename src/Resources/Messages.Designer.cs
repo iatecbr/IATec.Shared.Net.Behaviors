@@ -13,7 +13,7 @@ namespace IATec.Shared.Behaviors.Resources {
     
     
     /// <summary>
-    ///   Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
+    ///   A strongly-typed resource class for looking up localized strings.
     /// </summary>
     // Essa classe foi gerada automaticamente pela classe StronglyTypedResourceBuilder
     // através de uma ferramenta como ResGen ou Visual Studio.
@@ -33,7 +33,7 @@ namespace IATec.Shared.Behaviors.Resources {
         }
         
         /// <summary>
-        ///   Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
+        ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         public static global::System.Resources.ResourceManager ResourceManager {
@@ -47,8 +47,8 @@ namespace IATec.Shared.Behaviors.Resources {
         }
         
         /// <summary>
-        ///   Substitui a propriedade CurrentUICulture do thread atual para todas as
-        ///   pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
+        ///   Overrides the CurrentUICulture property of the current thread for all
+        ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         public static global::System.Globalization.CultureInfo Culture {
@@ -61,7 +61,7 @@ namespace IATec.Shared.Behaviors.Resources {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Sorry, an internal error occurred. Try again later..
+        ///   Looks up a localized string similar to Sorry, an internal error occurred. Try again later..
         /// </summary>
         public static string InternalServerErrorClientMessage {
             get {
@@ -70,7 +70,7 @@ namespace IATec.Shared.Behaviors.Resources {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a An unhandled exception has occurred.
+        ///   Looks up a localized string similar to An unhandled exception has occurred.
         /// </summary>
         public static string InternalServerErrorMessage {
             get {
