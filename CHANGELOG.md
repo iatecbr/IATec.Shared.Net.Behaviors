@@ -13,8 +13,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Expanded `README.md` with usage examples, installation instructions, and dependency overview.
 
 ### CHANGED
-- Updated `IATec.Shared.Domain` package reference from `1.2.0` to `2.0.0`.
-- Updated `Microsoft.Extensions.Localization.Abstractions` package reference to `10.0.8`.
+- Updated package references to newer versions for this release.
+  - Bumped `IATec.Shared.Domain` to `2.0.0`.
+  - Bumped `Microsoft.Extensions.Localization.Abstractions` to `10.0.8`.
 
 ---
 
