@@ -12,6 +12,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - XML documentation comments in English for all public classes and methods.
 - Expanded `README.md` with usage examples, installation instructions, and dependency overview.
 
+### CHANGED
+- Updated `IATec.Shared.Domain` package reference from `1.2.0` to `2.0.0`.
+- Updated `Microsoft.Extensions.Localization.Abstractions` package reference to `10.0.8`.
+
 ---
 
 ## [1.2.0] – 2026-01-12
