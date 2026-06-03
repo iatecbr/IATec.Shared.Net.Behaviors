@@ -9,7 +9,9 @@ pool:
   name: IATec-Builds-Agents
 
 variables:
-  buildConfiguration: 'Release'
+  - name: buildConfiguration
+    value: 'Release'
+  - group: nuget-credentials
 
 steps:
   - task: replacetokens@6
